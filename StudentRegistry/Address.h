@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 using namespace std;
-enum Type {
+enum AddressType {
 	PermanentResidence,
 	MailingAddress,
 	LegalRepresentative
@@ -10,14 +10,14 @@ enum Type {
 class Address {
 private:
 public:
-	Address();
+	Address(string state, string city, string street, string addressNumber, string referenceNumber, string zip, AddressType _type, string description);
 	~Address();
 	string State;
 	string City;
 	string Street;
-	string NoOfDescriptive;
+	string AddressNumber;
 	string ReferenceNumber;
 	string Zip;
-	Type _Type;
+	AddressType _Type;
 	string Description;
 };
